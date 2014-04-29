@@ -1,6 +1,7 @@
 class Wallet
+  attr_reader :total
 
-DENOMINATIONS = {:penny => 1, :nickel => 5}
+DENOMINATIONS = {:penny => 1, :nickel => 5, :dime => 10, :quarter => 25, :dollar => 100}
 
   def initialize
     @wallet = {}
@@ -8,11 +9,16 @@ DENOMINATIONS = {:penny => 1, :nickel => 5}
   end
 
   def <<(coin)
-    @wallet.has_key?(:coin) ? @wallet[:coin] += 1 :  @wallet[:coin] = 1
+    @wallet.has_key?(coin) ? @wallet[coin] += 1 :  @wallet[coin] = 1
   end
 
   def cents
-    return 0 if @wallet.empty?
-    total = @wallet.values.inject(0){ |result, n| result + n}
+    return @total if @wallet.empty?
+    DENOMINATIONS.each { |k,v| @total = v * @wallet[k] if @wallet.has_key?(k)  }
+    @total
+  end
+
+  def take(*coin)
+    @wallet.has_key?(coin) ? @wallet[coin] -= 1 :  nil
   end
 end
