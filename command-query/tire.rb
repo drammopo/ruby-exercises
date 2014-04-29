@@ -5,7 +5,7 @@ class Tire
   end
 
   def flat?
-    @flat ? "I ran over a nail!" : "This tire is brand new"
+    @flat
   end
 
   def blow_out

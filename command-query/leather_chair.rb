@@ -6,7 +6,7 @@ class LeatherChair
   end
 
   def faded?
-    faded ?  "New chairs are NOT faded." : "Exposed chairs are faded."
+    @faded
   end
 
   def expose_to_sunlight

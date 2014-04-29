@@ -5,7 +5,7 @@ class Door
   end
 
   def locked?
-    @locked ? "The door should be locked." : "The door should now be unlocked."
+    @locked
   end
 
   def unlock

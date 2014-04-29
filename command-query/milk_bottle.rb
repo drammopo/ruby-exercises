@@ -9,6 +9,6 @@ class MilkBottle
   end
 
   def full?
-    @full ? "The bottle should be full." : "The bottle should no longer be full."
+    @full
   end
 end

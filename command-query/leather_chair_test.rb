@@ -7,7 +7,7 @@ class LeatherChairTest < Minitest::Test
 
   def test_a_new_chair_is_not_faded
     chair = LeatherChair.new
-    assert chair.faded?, "New chairs are NOT faded."
+    refute chair.faded?, "New chairs are NOT faded."
   end
 
   def test_exposing_a_chair_to_sunlight_makes_it_fade

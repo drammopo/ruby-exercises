@@ -5,7 +5,7 @@ class Teeth
   end
 
   def clean?
-    @clean ? "The teeth should now be clean." : "The teeth should NOT be clean."
+    @clean
   end
 
   def brush

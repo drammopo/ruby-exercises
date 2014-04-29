@@ -5,7 +5,7 @@ class Floor
   end
 
   def dirty?
-    @dirty ? "The floor should be dirty." : "The floor should be clean."
+    @dirty
   end
 
   def wash
