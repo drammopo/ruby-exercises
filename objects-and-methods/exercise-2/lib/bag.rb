@@ -27,7 +27,7 @@ class Bag
     candy
   end
 
-  def take(number_of_candies)
+  def take(number_of_candies = 1)
     return @candies.pop if number_of_candies == 1
     @candies.pop(number_of_candies)
   end
