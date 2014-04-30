@@ -20,4 +20,15 @@ class Bag
   def contains?(candy)
     @candies.any?{ |c| c.type == candy }
   end
+
+  def grab(candy)
+    candy = @candies.detect{ |c| c.type == candy }
+    @candies.delete(candy)
+    candy
+  end
+
+  def take(number_of_candies)
+    return @candies.pop if number_of_candies == 1
+    @candies.pop(number_of_candies)
+  end
 end
