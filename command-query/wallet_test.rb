@@ -50,7 +50,6 @@ class WalletTest < Minitest::Test
   end
 
   def test_take_coins_out
-    skip
     wallet = Wallet.new
     wallet << :penny
     wallet << :penny
@@ -64,7 +63,6 @@ class WalletTest < Minitest::Test
   end
 
   def test_take_various_coins_out
-    skip
     wallet = Wallet.new
     wallet << :penny
     wallet << :dime

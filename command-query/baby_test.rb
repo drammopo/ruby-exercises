@@ -12,7 +12,7 @@ class BabyTest < Minitest::Test
   def test_not_so_tired_after_a_nap
     baby = Baby.new
     baby.nap
-    assert baby.tired?, "Naps help combat drowsiness."
+    refute baby.tired?, "Naps help combat drowsiness."
   end
 
 end

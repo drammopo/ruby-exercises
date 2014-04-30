@@ -22,7 +22,6 @@ class ClearanceTest < Minitest::Test
     clearance << Item.new("shirt", price: 16, discount: 2)
     clearance << Item.new("pants", price: 10, discount: 5)
     clearance << Item.new("jacket", price: 30, discount: 10)
-    puts clearance.inspect
     assert_equal "pants", clearance.best_deal
   end
 
